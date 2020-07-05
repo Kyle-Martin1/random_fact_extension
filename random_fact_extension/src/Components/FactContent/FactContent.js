@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const FactContent = () => {
+import styles from './FactContent.module.css';
+
+class FactContent extends Component {
 
     state = {
         currentFact: null
     }
 
     componentDidMount() {
-        fetch('')
+        fetch('https://uselessfacts.jsph.pl/random.json?language=en')
         .then(result => {
           return result.json();
         })
         .then(jsonReturn => {
             this.setState({
-                currentFact: jsonReturn.message
+                currentFact: jsonReturn.text
             });
         })
         .catch(error => {
@@ -21,11 +23,16 @@ const FactContent = () => {
         });
     }
 
-    return(
-        <div>
-            <p>{this.state.currentFact}
-        </div>
-    )
+    render(){
+        return(
+            <div className={styles.factContainer}>
+                <div className={styles.factContainerHeader}>
+                    <p>Did you know?</p>
+                </div>
+                <p className={styles.fact}>{this.state.currentFact}</p>
+            </div>
+        )
+    }
 };
 
 export default FactContent;
