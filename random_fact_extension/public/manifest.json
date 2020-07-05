@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Random Fact",
+  "description": "What are we going to learn today?",
+  "version": "1.0.0",
+
+  "browser_action": {
+    "default_icon": "icon16.png",
+    "default_popup": "index.html",
+    "default_title": "What will you learn this time?"
+  },
+  "icons": {
+    "16": "icon16.png"
+  },
+  "content_security_policy": "script-src 'self' 'sha256-ZdYzJ+blulOo+CipL1wR4qfvKqQ9CA0xFWGvnRSVZrA='; object-src 'self'",  "permissions": [
+  ]
+}
