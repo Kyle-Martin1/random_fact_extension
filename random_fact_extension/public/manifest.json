@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Random Fact",
-  "description": "What will you learn this time?",
+  "description": "Random Fact Generator: What will you learn this time?",
   "version": "1.0.0",
 
   "browser_action": {
@@ -11,7 +11,8 @@
     "default_title": "What will you learn this time?"
   },
   "icons": {
-    "16": "icon16.png"
+    "16": "icon16.png",
+    "48": "icon48.png"
   },
   "content_security_policy": "script-src 'self' 'sha256-o8sACCTln7AMUKpUBUEoTIM/iIUX5So1vWuGrKTykPc='; object-src 'self'",  "permissions": [
   ]
