@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import styles from './FactContent.module.css';
+import RefreshButton from '../RefreshButton/ResfreshButton.js';
 
 class FactContent extends Component {
 
@@ -23,6 +24,21 @@ class FactContent extends Component {
         });
     }
 
+    RefreshButtonHandler = () => {
+        fetch('https://uselessfacts.jsph.pl/random.json?language=en')
+        .then(result => {
+          return result.json();
+        })
+        .then(jsonReturn => {
+            this.setState({
+                currentFact: jsonReturn.text
+            });
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
+
     render(){
         return(
             <div className={styles.factContainer}>
@@ -30,6 +46,7 @@ class FactContent extends Component {
                     <p>Did you know?</p>
                 </div>
                 <p className={styles.fact}>{this.state.currentFact}</p>
+                <RefreshButton clicked={this.RefreshButtonHandler}/>
             </div>
         )
     }

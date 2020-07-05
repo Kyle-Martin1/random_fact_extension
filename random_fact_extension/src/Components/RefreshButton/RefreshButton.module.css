@@ -1,0 +1,23 @@
+.RefreshButton {
+    width: 150px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1.5px black solid;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.RefreshButton:hover {
+    background-color: white;
+    box-shadow: 1.5px 1.5px black;
+}
+
+.RefreshButton:active {
+    box-shadow: 3.5px 3.5px black;
+}
