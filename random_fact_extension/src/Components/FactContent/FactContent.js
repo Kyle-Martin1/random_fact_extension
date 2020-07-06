@@ -41,11 +41,13 @@ class FactContent extends Component {
 
     render(){
         return(
-            <div className={styles.factContainer}>
-                <div className={styles.factContainerHeader}>
-                    <p>Did you know?</p>
+            <div className={styles.outerContainer}>
+                <div className={styles.factContainer}>
+                    <div className={styles.factContainerHeader}>
+                        <p>Did you know?</p>
+                    </div>
+                    <p className={styles.fact}>{this.state.currentFact}</p>
                 </div>
-                <p className={styles.fact}>{this.state.currentFact}</p>
                 <RefreshButton clicked={this.RefreshButtonHandler}/>
             </div>
         )

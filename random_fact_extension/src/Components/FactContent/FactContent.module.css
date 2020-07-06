@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+.outerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
 .factContainer {
-    width: 500px;
-    height: 250px;
+    width: 450px;
+    height: 225px;
     padding: 0;
     margin: 0;
     display: flex;
@@ -10,11 +18,14 @@
     justify-content: center;
     align-items: center;
     background-color: white;
-    border: 5px black solid
+    border: 1.5px black solid;
+    box-shadow: 1.5px 1.5px black;
+    margin: 15px;
 }
 
+
 .factContainerHeader {
-    width: 100%;
+    width: 90%;
     height: 50px;
     font-size: 14px;
     background-color: white;

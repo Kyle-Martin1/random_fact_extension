@@ -11,10 +11,10 @@
     border: 1.5px black solid;
     font-size: 12px;
     font-weight: bold;
+    margin: 15px;
 }
 
 .RefreshButton:hover {
-    background-color: white;
     box-shadow: 1.5px 1.5px black;
 }
 
