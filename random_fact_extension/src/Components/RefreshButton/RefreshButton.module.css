@@ -12,6 +12,7 @@
     font-size: 12px;
     font-weight: bold;
     margin: 15px;
+    border-radius: 10px;
 }
 
 .RefreshButton:hover {
